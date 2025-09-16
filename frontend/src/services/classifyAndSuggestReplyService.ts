@@ -6,7 +6,7 @@ export const classifyAndSuggestReply = async (emailContent: string | File) => {
     formData.append("text", emailContent);
   }
 
-  const response = await fetch("http://127.0.0.1:8000/classify-email/", {
+  const response = await fetch("https://case-auto-u.fly.dev/classify-email/", {
     method: "POST",
     body: formData,
   });
