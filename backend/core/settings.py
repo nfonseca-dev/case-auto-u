@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://case-auto-u-np98.vercel.app/",
+    "https://case-auto-u-np98.vercel.app",
 ]
 
 ROOT_URLCONF = 'core.urls'
