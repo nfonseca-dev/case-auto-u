@@ -28,13 +28,13 @@ class ClassifyEmailView(APIView):
 
             else:
                 return Response(
-                    {"error": "Unsupported file type. Only .txt and .pdf are allowed."},
+                    {"erro": "Formato de arquivo não suportado. Apenas .txt e .pdf são permitidos."},
                     status=status.HTTP_400_BAD_REQUEST,
                 )
 
         if not text_content:
             return Response(
-                {"error": "No content to classify."},
+                {"erro": "Nenhum conteúdo para classificar."},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
