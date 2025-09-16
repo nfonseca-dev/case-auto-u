@@ -29,9 +29,9 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.fly.dev']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.fly.dev', 'case-auto-u-np98.vercel.app']
 
-CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev']
+CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev', 'https://case-auto-u-np98.vercel.app']
 
 # Application definition
 
@@ -62,6 +62,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://case-auto-u-np98.vercel.app/",
 ]
 
 ROOT_URLCONF = 'core.urls'
