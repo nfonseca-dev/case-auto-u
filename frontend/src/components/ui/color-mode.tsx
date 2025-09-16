@@ -7,7 +7,9 @@ import type { ThemeProviderProps } from "next-themes";
 import * as React from "react";
 import { LuMoon, LuSun } from "react-icons/lu";
 
-export interface ColorModeProviderProps extends ThemeProviderProps {}
+export type ColorModeProviderProps = Omit<ThemeProviderProps, "children"> & {
+  children: React.ReactNode;
+};
 
 export function ColorModeProvider(props: ColorModeProviderProps) {
   return (
@@ -17,11 +19,11 @@ export function ColorModeProvider(props: ColorModeProviderProps) {
 
 export type ColorMode = "light" | "dark";
 
-export interface UseColorModeReturn {
+export type UseColorModeReturn = {
   colorMode: ColorMode;
   setColorMode: (colorMode: ColorMode) => void;
   toggleColorMode: () => void;
-}
+};
 
 export function useColorMode(): UseColorModeReturn {
   const { resolvedTheme, setTheme, forcedTheme } = useTheme();
@@ -46,7 +48,7 @@ export function ColorModeIcon() {
   return colorMode === "dark" ? <LuMoon /> : <LuSun />;
 }
 
-interface ColorModeButtonProps extends Omit<IconButtonProps, "aria-label"> {}
+type ColorModeButtonProps = Omit<IconButtonProps, "aria-label">;
 
 export const ColorModeButton = React.forwardRef<
   HTMLButtonElement,
