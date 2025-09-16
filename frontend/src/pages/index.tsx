@@ -22,6 +22,7 @@ export default function ClassifyEmailPage() {
     suggestedReply: string;
   } | null>(null);
 
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   const handleFileUpload = (file: any) => {
     if (!file) {
       setUploadedFile(null);
