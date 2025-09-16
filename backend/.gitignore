@@ -222,3 +222,4 @@ __marimo__/
 Dockerfile
 docker-compose.yml
 .dockerignore
+fly.toml
